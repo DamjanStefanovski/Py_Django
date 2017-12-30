@@ -82,11 +82,8 @@ greet()
 
 # This assignment is not attached to the original function:
 
-del hello
 
-hello()
 
-greet()
 
 ######################################
 # Functions within functions

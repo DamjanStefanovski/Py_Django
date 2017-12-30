@@ -5,7 +5,7 @@
 # In this lecture we will learn about Errors and Exception Handling in Python.
 # You've definitely already encountered errors by this point in the course.
 # For example:
-print('Hello
+
 
 
 # Note how we get a SyntaxError, with the further description that it was an EOL
@@ -47,14 +47,15 @@ print('Hello
 # some code that opens and writes a file:
 
 try:
-    f = open('testfile','w')
-    f.write('Test write this')
+    f = open('simple.txt','w')
+    f.write('Test write to simple text')
 except IOError:
     # This will only check for an IOError exception and then execute this print statement
-   print("Error: Could not find file or read data")
+    print("Error:Could not find file or read data!")
 else:
-   print("Content written successfully")
-   f.close()
+    print("SUCCESS!")
+    f.close()
+print("hello world!")
 
 
 # Now lets see what would happen if we did not have write permission (opening only with 'r'):
@@ -86,9 +87,9 @@ try:
 except:
     # This will check for any exception and then execute this print statement
    print("Error: Could not find file or read data")
-else:
-   print("Content written successfully")
-   f.close()
+finally:
+   print("I always work no matter what!")
+
 
 
 # Great! Now we don't actually need to memorize that list of exception types!
